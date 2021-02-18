@@ -1,6 +1,47 @@
 package com.example.newkotlin
 
 fun main(){
+    //When expressions
+    var season = 3
+    when(season){
+        1 -> println("Spring")
+        2 -> println("Summer")
+        3 -> {
+            println("Fall")
+            println("Autumn")
+        }
+        4 -> println("Winter")
+        else -> println("Invalid season")
+    }
+
+    var month = 3
+    when(month){
+        in 3..5 -> println("Spring")
+        in 6..8 -> println("Summer")
+        in 9..11 -> println("Fall")
+        12, 1, 2 -> println("Winter")
+        else -> println("Invalid season")
+    }
+
+    val ages = 17
+    when(ages){
+        !in 0..20 -> println("You're not allowed to take alcohol")
+        in 21..50 -> println("You can own a house")
+        in 18..20 -> println("Now you may drink in Kenya")
+        16, 17 -> println("You may vote now")
+        else -> println("You are too young")
+    }
+
+    var x : Any = 13.34F
+    when(x){
+        is Int -> println("$x is an Int")
+       // is Double -> println("$x is a Double")
+        !is Double -> println("$x is not a Double")
+        is String -> println("$x is a String")
+        else -> println("$x is none of the above")
+    }
+
+
     //If statement with strings and other data types
     var name = "Thom"
 
