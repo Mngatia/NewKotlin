@@ -1,6 +1,72 @@
 package com.example.newkotlin
 
 fun main(){
+
+    //Types of loops
+    //For loops
+    println("\n")
+    //for (i in 11 downTo 1){
+    for (i in 10 downTo 1 step 2){    //Same as - for(i in 10.downTo(1).step(2))
+        print("$i ")
+    }
+
+    println("\n")
+    for (i in 1 until 10){  //same as  - for(i in 1.until(10))
+        print("$i ")
+    }
+
+    for (num in 1..10){
+        print("$num")
+    }
+
+
+    //Another way to use while loop
+    var feltTemp = "Cold"
+    var roomTemp = 10
+    while (feltTemp == "Cold") {
+        roomTemp++
+        if (roomTemp >= 20){
+            feltTemp = "Comfy"
+            println("\nIt's comfy now")
+        }
+    }
+
+
+    //Do while loops
+    var A = 100
+    while (A >= 0) {
+        print("$A")
+        A -= 2
+    }
+    println("\nWhile loop is done")
+    A = 1
+    do {
+       print("$A")
+        A++
+    }while (A <= 10)
+    println("\ndo whilw loop is done")
+
+
+
+
+    //While loop executes a block of code repeatedly as long as a given condition is true
+    var y = 1
+    while (y <= 10){
+        print("$y")
+       // println("$y")
+        y++
+    }
+   // println("While loop is done")
+    println("\nWhile loop is done")
+
+    var z = 100
+    while (z >= 0) {
+        print("$z")
+        z -= 2
+    }
+    println("\nWhile loop is done")
+
+
     //When expressions
     var season = 3
     when(season){
@@ -165,3 +231,4 @@ fun main(){
 //    val myName = "Jane"
 //    print("Hello " + myName)
 }
+
