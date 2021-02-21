@@ -12,7 +12,7 @@ fun main(){
     Jane.hobby = "Hiking"
     Jane.stateHobby()
     var Alice = Person()
-    Alice.hobby = "Listens music"
+    Alice.hobby = "Listening to music"
     Alice.stateHobby()
    var AliceWeyn = Person(lastName = "Weyn")
 
@@ -28,9 +28,11 @@ class Person (firstName: String = "Alice", lastName: String = "Walter") {
     //Members variables - properties
     var age : Int? = null
     var hobby : String = "Watching movies"
+    var firstName : String? = null
 
    //Initializer block
     init {
+       this.firstName = firstName
         println("Initialized a new Person object with " +
                 "firstName = $firstName and lastName = $lastName")
     }
@@ -44,6 +46,6 @@ class Person (firstName: String = "Alice", lastName: String = "Walter") {
 
     //Member functions - methods
     fun stateHobby(){
-        println("My hobby is $hobby")
+        println("$firstName\'s hobby is $hobby")
     }
 }
